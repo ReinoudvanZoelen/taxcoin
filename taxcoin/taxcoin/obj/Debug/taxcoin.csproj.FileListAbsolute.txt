@@ -1,0 +1,7 @@
+C:\Users\Reino\Desktop\taxcoin\taxcoin\taxcoin\bin\Debug\taxcoin.exe.config
+C:\Users\Reino\Desktop\taxcoin\taxcoin\taxcoin\bin\Debug\taxcoin.exe
+C:\Users\Reino\Desktop\taxcoin\taxcoin\taxcoin\bin\Debug\taxcoin.pdb
+C:\Users\Reino\Desktop\taxcoin\taxcoin\taxcoin\obj\Debug\taxcoin.csprojResolveAssemblyReference.cache
+C:\Users\Reino\Desktop\taxcoin\taxcoin\taxcoin\obj\Debug\taxcoin.csproj.CoreCompileInputs.cache
+C:\Users\Reino\Desktop\taxcoin\taxcoin\taxcoin\obj\Debug\taxcoin.exe
+C:\Users\Reino\Desktop\taxcoin\taxcoin\taxcoin\obj\Debug\taxcoin.pdb
