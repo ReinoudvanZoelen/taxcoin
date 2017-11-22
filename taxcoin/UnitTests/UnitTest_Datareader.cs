@@ -47,7 +47,7 @@ namespace UnitTests
 
             // Assert
             Assert.IsNotNull(outputExisting);
-            //Assert.Equals(maximumValue, 3750);
+            Assert.AreEqual(maximumValue, 3750);
         }
 
         [TestMethod]
@@ -61,7 +61,7 @@ namespace UnitTests
 
             // Assert
             Assert.IsNotNull(outputExisting);
-            //Assert.Equals(maximumValue, 265);
+            //Assert.AreEqual(maximumValue, 265);
         }
 
         [TestMethod]
@@ -75,7 +75,7 @@ namespace UnitTests
 
             // Assert
             Assert.IsNotNull(outputExisting);
-            //Assert.Equals(maximumValue, 117);
+            //Assert.AreEqual(maximumValue, 117);
         }
 
 
