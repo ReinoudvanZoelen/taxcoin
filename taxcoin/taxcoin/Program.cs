@@ -12,7 +12,10 @@ namespace taxcoin
     {
         static void Main(string[] args)
         {
+            //int[] readFromFile = Datareader.ReadDataFromLocalFile("testInput1.txt");
             int[] readFromFile = Datareader.ReadDataFromLocalFile("sampleInput.txt");
+            //int[] readFromFile = Datareader.ReadDataFromLocalFile("submitInput.txt");
+            //int[] readFromFile = Datareader.ReadDataFromLocalFile("testInput2.txt");
 
             int maximumValue = new DataAnalyzer(readFromFile).FindMaximalValue();
 
