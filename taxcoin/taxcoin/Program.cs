@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using taxcoin.Algorithm;
 using taxcoin.Helpers;
 
 namespace taxcoin
@@ -12,14 +7,14 @@ namespace taxcoin
     {
         static void Main(string[] args)
         {
-            //int[] readFromFile = Datareader.ReadDataFromLocalFile("testInput1.txt");
-            int[] readFromFile = Datareader.ReadDataFromLocalFile("sampleInput.txt");
-            //int[] readFromFile = Datareader.ReadDataFromLocalFile("submitInput.txt");
-            //int[] readFromFile = Datareader.ReadDataFromLocalFile("testInput2.txt");
+            int[][] datasets = new int[4][];
 
-            int maximumValue = new DataAnalyzer(readFromFile).FindMaximalValue();
+            datasets[0] = Datareader.ReadDataFromLocalFile("testInput1.txt");
+            datasets[1] = Datareader.ReadDataFromLocalFile("sampleInput.txt");
+            datasets[2] = Datareader.ReadDataFromLocalFile("submitInput.txt");
+            datasets[3] = Datareader.ReadDataFromLocalFile("testInput2.txt");
 
-            Console.WriteLine("Maximum value: " + maximumValue);
+            new DataAnalyzer(datasets[0]).FindMaximalValue();
 
             // Wait for readkey so the console application doesn't close itself
             Console.WriteLine("Program complete. Press any key to exit.");

@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace taxcoin.Helpers
 {
@@ -20,6 +17,7 @@ namespace taxcoin.Helpers
             List<string> readLines = new List<string>();
 
             #region Take the root path from where the program runs at first, then keep trimming away until a file is found
+
             string path = Directory.GetCurrentDirectory();
 
             // Trim the path and go up a level if the file is not found
@@ -43,9 +41,11 @@ namespace taxcoin.Helpers
 
                 //Console.WriteLine("Path has been updated to " + path + @"\" + filename);
             }
+
             #endregion
 
             #region Read the lines and write them to readLines
+
             string fullpath = path + @"\" + filename;
 
             Console.WriteLine("A file has been found at " + path + @"\" + filename);
@@ -58,9 +58,11 @@ namespace taxcoin.Helpers
                     readLines.Add(line);
                 }
             }
+
             #endregion
 
             #region Split the strings into int arrays
+
             // Split line 2 into individual values
             string[] splitSecondLineToString = readLines[1].Split(' ');
 
@@ -76,9 +78,11 @@ namespace taxcoin.Helpers
             {
                 secondLineIntegers[i] = Convert.ToInt32(splitSecondLineToString[i]);
             }
+
             #endregion
 
             #region DEBUG: Write read values to the console
+
             /* 
             Console.WriteLine("First line integers: " + firstLineInteger[0]);
             for (int i = 0; i < secondLineIntegers.Length;i++)
@@ -86,12 +90,15 @@ namespace taxcoin.Helpers
                 Console.WriteLine("Second line integer: " + secondLineIntegers[i]);
             }
             */
+
             #endregion
 
             #region Merge the arrays
+
             int[] output = new int[firstLineInteger.Length + secondLineIntegers.Length];
             firstLineInteger.CopyTo(output, 0);
             secondLineIntegers.CopyTo(output, firstLineInteger.Length);
+
             #endregion
 
             return output;

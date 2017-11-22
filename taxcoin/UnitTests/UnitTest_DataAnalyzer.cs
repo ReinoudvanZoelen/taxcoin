@@ -1,12 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using taxcoin.Helpers;
-using taxcoin.Algorithm;
 
 namespace UnitTests
 {
     [TestClass]
-    public class UnitTest_Datareader
+    public class UnitTest_DataAnalyzer
     {
         [TestMethod]
         public void Test_SampleInput()
@@ -93,7 +92,5 @@ namespace UnitTests
             Assert.IsNotNull(outputExisting);
             Assert.AreEqual(maximumValue, 0);
         }
-
-
     }
 }
