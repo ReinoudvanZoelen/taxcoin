@@ -14,7 +14,7 @@ namespace UnitTests
             int[] outputExisting = Datareader.ReadDataFromLocalFile("sampleInput.txt");
 
             // Act
-            int maximumValue = new DataAnalyzer(outputExisting).FindMaximalValue();
+            int maximumValue = new DataAnalyzer(outputExisting).CalculateOptimalRevenue();
 
             // Assert
             Assert.IsNotNull(outputExisting);
@@ -28,7 +28,7 @@ namespace UnitTests
             int[] outputExisting = Datareader.ReadDataFromLocalFile("testInput1.txt");
 
             // Act
-            int maximumValue = new DataAnalyzer(outputExisting).FindMaximalValue();
+            int maximumValue = new DataAnalyzer(outputExisting).CalculateOptimalRevenue();
 
             // Assert
             Assert.IsNotNull(outputExisting);
@@ -42,39 +42,41 @@ namespace UnitTests
             int[] outputExisting = Datareader.ReadDataFromLocalFile("testInput2.txt");
 
             // Act
-            int maximumValue = new DataAnalyzer(outputExisting).FindMaximalValue();
+            int maximumValue = new DataAnalyzer(outputExisting).CalculateOptimalRevenue();
 
             // Assert
             Assert.IsNotNull(outputExisting);
-            Assert.AreEqual(maximumValue, 3750);
+            Assert.AreEqual(3750, maximumValue);
         }
 
         [TestMethod]
+        [Ignore]
         public void Test_TestInput3()
         {
             // Arrange
             int[] outputExisting = Datareader.ReadDataFromLocalFile("testInput3.txt");
 
             // Act
-            int maximumValue = new DataAnalyzer(outputExisting).FindMaximalValue();
+            int maximumValue = new DataAnalyzer(outputExisting).CalculateOptimalRevenue();
 
             // Assert
             Assert.IsNotNull(outputExisting);
-            //Assert.AreEqual(maximumValue, 265);
+            Assert.AreEqual(maximumValue, 265);
         }
 
         [TestMethod]
+        [Ignore]
         public void Test_TestInput4()
         {
             // Arrange
             int[] outputExisting = Datareader.ReadDataFromLocalFile("testInput4.txt");
 
             // Act
-            int maximumValue = new DataAnalyzer(outputExisting).FindMaximalValue();
+            int maximumValue = new DataAnalyzer(outputExisting).CalculateOptimalRevenue();
 
             // Assert
             Assert.IsNotNull(outputExisting);
-            //Assert.AreEqual(maximumValue, 117);
+            Assert.AreEqual(maximumValue, 117);
         }
 
 
@@ -86,11 +88,11 @@ namespace UnitTests
             int[] outputExisting = Datareader.ReadDataFromLocalFile("submitInput.txt");
 
             // Act
-            int maximumValue = new DataAnalyzer(outputExisting).FindMaximalValue();
+            int maximumValue = new DataAnalyzer(outputExisting).CalculateOptimalRevenue();
 
             // Assert
             Assert.IsNotNull(outputExisting);
-            Assert.AreEqual(maximumValue, 0);
+            Assert.AreEqual(maximumValue, 97005394);
         }
     }
 }
